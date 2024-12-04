@@ -8,12 +8,10 @@ export default function Counter() {
   return (
     <div className="card">
       <Title />
-      <div>
-        <Count count={count} />
-        <Button type="reset" className="reset-btn reset-btn-icon" setCount={setCount}>&#x21BB;</Button>
-      </div>
+      <Count count={count} />
+      <Button type="reset" className="reset-btn reset-btn-icon" setCount={setCount}>&#x21BB;</Button>
       <div className="button-container">
-        <Button type="sub" className="count-btn count-bnt-icon" setCount={setCount}>&#45;</Button>
+        <Button type="sub" className="count-btn count-bnt-icon" setCount={setCount}>&ndash;</Button>
         <Button type="add" className="count-btn count-bnt-icon" setCount={setCount}>&#43;</Button>
       </div>
     </div>
