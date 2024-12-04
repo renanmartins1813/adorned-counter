@@ -7,7 +7,7 @@ export default function Title({ limit }: TitleProps) {
     <h1 className="title">
       {limit ? (
         <span>
-          You already got a really <b>nice</b> number, no need to changes.
+          You already got a really <b>nice</b> number, no need for changes.
         </span>
       )
         : `Edorned Counter`}
