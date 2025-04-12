@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "../components/Button";
 import Count from "../components/Count";
 import Title from "../components/Title";
@@ -6,6 +6,18 @@ import Title from "../components/Title";
 export default function Counter() {
   const [count, setCount] = useState(0)
   const limit = count === 69 ? true : false;
+
+  useEffect(() => {
+    window.addEventListener("keydown", (e) => {
+      if (e.code === "Space") {
+        setCount(count + 1)
+      }
+
+      if (e.code === "Backspace") {
+        setCount(count - 1)
+      }
+    })
+  }, [count])
 
   return (
     <div className="card">
