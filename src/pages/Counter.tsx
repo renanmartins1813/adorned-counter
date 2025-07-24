@@ -8,15 +8,36 @@ export default function Counter() {
   const limit = count === 69 ? true : false;
 
   useEffect(() => {
-    window.addEventListener("keydown", (e) => {
-      if (e.code === "Space") {
+    const handleKeydown = (event) => {
+      if (event.code === "Space") {
+        const newValue = count + 1
+        if (newValue > 69) {
+          return
+        }
+
         setCount(count + 1)
       }
 
-      if (e.code === "Backspace") {
+      if (event.code === "Backspace") {
+        const newValue = count - 1
+        if (newValue < 0 || newValue == 68) {
+          return
+        }
+
         setCount(count - 1)
       }
-    })
+
+      if (event.code === "KeyR") {
+        setCount(0)
+      }
+    }
+
+    window.addEventListener("keydown", handleKeydown)
+
+    //react useEffect CLEANUP FUNCTION
+    return () => {
+      window.removeEventListener("keydown", handleKeydown)
+    }
   }, [count])
 
   return (

@@ -11,7 +11,7 @@ type ButtonProps = {
 export default function Button({ children, type, className, setCount, limit }: ButtonProps) {
   const canDissable = type === 'add' || type === 'sub';
 
-  function handleClick() {
+  function handleClick(event) {
     setCount((prev) => {
       switch (type) {
         case 'add': {
@@ -30,6 +30,8 @@ export default function Button({ children, type, className, setCount, limit }: B
         }
       }
     })
+
+    event.currentTarget.blur()
   }
 
   return (
