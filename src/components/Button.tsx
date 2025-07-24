@@ -31,6 +31,7 @@ export default function Button({ children, type, className, setCount, limit }: B
       }
     })
 
+    //remove the button focus to prevent bugs using event keydown
     event.currentTarget.blur()
   }
 
