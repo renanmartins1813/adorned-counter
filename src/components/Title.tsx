@@ -1,16 +1,16 @@
 type TitleProps = {
-  limit: boolean
+    limit: boolean
 }
 export default function Title({ limit }: TitleProps) {
 
-  return (
-    <h1 className="title">
-      {limit ? (
-        <span>
-          You already got a really <b>nice</b> number, no need for changes.
-        </span>
-      )
-        : `Edorned Counter`}
-    </h1>
-  );
+    return (
+        <h1 className="title">
+            {limit ? (
+                <span>
+                    You already got a really <b>nice</b> number, no need for changes.
+                </span>
+            )
+                : `Edorned Counter`}
+        </h1>
+    );
 }

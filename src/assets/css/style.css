@@ -50,6 +50,7 @@ main {
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	width: 90%;
+	min-height: 87px;
 	text-align: center;
 	line-height: 0.9;
 	font-weight: 500;

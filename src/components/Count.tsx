@@ -1,11 +1,11 @@
 type CountProps = {
-  count: number
+    count: number
 }
 
 export default function Count({ count }: CountProps) {
 
-  return (
-    <div className="count">{count}</div>
-  )
+    return (
+        <div className="count">{count}</div>
+    )
 }
 
